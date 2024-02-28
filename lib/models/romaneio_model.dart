@@ -11,7 +11,7 @@ enum Destino { vendas, serraria, picador, selecionar }
   createToJson: true,
 )
 class Romaneio {
-  String fornecedor = "f";
+  String fornecedor = "fornecedor";
   Especie especie = Especie.selecionar;
   Destino destino = Destino.selecionar;
   String destinoComplemeneto = "d";
@@ -21,7 +21,7 @@ class Romaneio {
   double volume = 0;
   double diametro = 0;
   double comprimentoCarga = 0;
-  double equipamento = 0;
+  String equipamento = "e";
   String placa = "p";
   String operador = "o";
   String motorista = "m";
@@ -29,8 +29,20 @@ class Romaneio {
 
   Romaneio();
 
+  @override
+  String toString() {
+    return 'Romaneio';
+  }
+
   factory Romaneio.fromJson(Map<String, dynamic> json) =>
       _$RomaneioFromJson(json);
 
   Map<String, dynamic> toJson() => _$RomaneioToJson(this);
+
+  Map<String, List<Enum>> enumUsed() {
+    return {
+      'destino': Destino.values.toList(),
+      'especie': Especie.values.toList()
+    };
+  }
 }
