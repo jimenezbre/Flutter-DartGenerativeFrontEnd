@@ -1,1 +1,1 @@
-A simple Flutter application that reads a model and creates a form from it (unfinished...)
+A simple Flutter application that reads multiples model and creates pages and forms from it (unfinished...)
