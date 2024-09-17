@@ -1,3 +1,4 @@
 {
-    "flutter-preview.target": "lib/main.dart"
-}
+    "dart.sdkPath": "/usr/lib/dart/bin/dart",
+    "dart.sdkSwitchingTarget": "global"
+  }
